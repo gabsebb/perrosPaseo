@@ -6,15 +6,44 @@
              mc:Ignorable="d"
              x:Class="perrosPaseo.Views.LoginPage"
              Shell.NavBarIsVisible="False"
-             xmlns:vm="clr-namespace:perrosPaseo.ViewModels">
+             xmlns:vm="clr-namespace:perrosPaseo.ViewModels"
+             BackgroundColor="{StaticResource Fondo}">
     
     <ContentPage.BindingContext>
         <vm:LoginViewModel/>
     </ContentPage.BindingContext>
 
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Image Source="" WidthRequest="100" HeightRequest="100" VerticalOptions="Center" />
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+    <StackLayout Padding="10,0,10,0" VerticalOptions="FillAndExpand">
+        <StackLayout>
+            <ContentView Padding="20,40,0,40" HorizontalOptions="Center">
+                <Image Source="dog.png" WidthRequest="150" HeightRequest="150" VerticalOptions="Center" />
+            </ContentView>
+            <Label Text="Comenzar con Pet" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label Text="Correo"/>
+            <Frame>
+                <Entry Placeholder="Ingresa tu correo" ></Entry>
+            </Frame>
+            <Label Text="Contraseña"/>
+            <Frame>
+                <Entry Placeholder="Ingresa tu contraseña"></Entry>
+            </Frame>
+            <Label Text=""></Label>
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" class="Primario"/>
         </StackLayout>
+        
+        <StackLayout>
+            <Label Text=""></Label>
+            <Label Text="------------------o-------------------"></Label>
+            <Label Text=""></Label>
+            <Button Text="Continuar con Google" StyleClass="Secundario"></Button>
+            <Button Text="Continuar con Facebook" StyleClass="Secundario"></Button>
+            <Button Text="Continuar con Numero Telefonico" StyleClass="Secundario"></Button>
+            <Label Text=""></Label>
+            <Label Text="------------------o-------------------"></Label>
+            <Label Text="Algo mas!!!" FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="20"></Label>
+        </StackLayout>
+        
+    </StackLayout>
+    
 
 </ContentPage>
